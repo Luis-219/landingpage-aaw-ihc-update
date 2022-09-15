@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  outline: none; border:none;
   text-decoration: none;
   padding: 0;
   margin: 0;
@@ -7,7 +8,7 @@
 
 html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 62.5%;
+  font-size: 75%;
 }
 
 p {
@@ -28,6 +29,7 @@ header, footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 120%;
 }
 
 ul {
@@ -36,11 +38,8 @@ ul {
   flex: 1 1 0;
 }
 
-header h1{
-  font-size: 25px;
-}
 ul > li {
-  margin-left: 37px;
+  margin-left: 30px;
 }
 
 .link {
@@ -53,12 +52,15 @@ ul > li {
 }
 
 
+
 .banner {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 1200px;
   margin: 65px auto;
+}
+.banner .row .banner-info{
+  font-size: 15px;
 }
 .banner .row{
   display: flex;
@@ -72,7 +74,7 @@ ul > li {
   text-align: center;
 }
 .banner .row .image img{
-  width: 80%;
+  width: 70%;
   border-radius: 1%;
 }
 
@@ -80,17 +82,16 @@ ul > li {
   flex: 1 1 45rem;
   padding: 2rem;
   text-align: center;
-  margin-left: 20px;
+  margin-left: 5px;
   flex: auto;
 }
 
 .banner-info h2 {
-  font-size: 3rem;
   font-weight: bold;
 }
 
 .banner-info p {
-  margin: 36px 0;
+  margin: 20px 0;
 }
 
 .banner-info a {
@@ -140,6 +141,10 @@ ul > li {
 .details h3 {
   font-size: 24px;
   color: var(--primary);
+  text-align: center;
+}
+.details .texto {
+  font-size: 120%;
 }
 
 .user-type {
@@ -154,7 +159,77 @@ ul > li {
 .type-description {
   margin-top: 5px;
 }
-
+.contacto{
+  max-width: 1200px;
+  margin: 65px auto;
+  padding: 1rem;
+}
+.contacto .heading{
+  font-size: 24px;
+  color: var(--primary);
+  text-align: center;
+  padding-bottom: 2rem;
+}
+.contacto .row{
+  display: flex;
+}
+.contacto .row .image{
+  flex: 1 1 45rem;
+  text-align: center;
+}
+.contacto .row .image img{
+  width: 100%;
+  border-radius: 5%;
+}
+.contacto .row{
+  padding: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.contacto .row form{
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+.contacto .row form h3{
+  font-weight: lighter;
+  font-size: 2rem;
+  color: #7928CA;
+  padding-bottom: 1rem;
+}
+.contacto .row form .inputBox{
+  display: flex;
+  padding-left: 1rem;
+  align-items:center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border: .1rem solid blue;
+}
+.contacto .row form .inputBox span{
+  color: blue;
+  font-size: 2rem;
+  padding-left: .1rem;
+}
+.contacto .row form .inputBox input{
+  width: 100%;
+  padding: .8rem;
+  font-size: 1rem;
+  color: black;
+  text-transform: none;
+}
+.btn{
+  padding: 1rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  background-color: #0070F3;
+  color: white;
+  border-radius: 8%;
+}
+footer{
+  background-color: var(--primary);
+  color: white;
+}
 footer .redes{
   padding:1rem 0;
 }
@@ -165,18 +240,24 @@ footer .redes a {
   color: white;
   margin: .5rem;
 }
-
-@media (max-width: 1000px)
+footer{
+  font-size: 120%;
+}
+@media (max-width: 800px)
 {
   html{
-    font-size: 60%;
+    font-size: 80%;
   }
   section, main{
     padding: 3rem;
   }
+  
 }
 @media (max-width: 750px)
 {
+  html{
+    font-size: 70%;
+  }
   header nav{
     visibility: hidden;
   }
@@ -185,7 +266,6 @@ footer .redes a {
   }
 }
 @media (max-width:450px){
-
   html{
       font-size: 50%;
   }
